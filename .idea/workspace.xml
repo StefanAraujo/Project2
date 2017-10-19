@@ -17,11 +17,12 @@
       <file leaf-file-name="CharSorter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CharSorter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+            <state relative-caret-position="204">
+              <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
               <folding>
                 <element signature="method#getMainMenu#0;class#CharSorter#0" expanded="false" />
                 <element signature="method#charTypes#0;class#CharSorter#0" expanded="false" />
+                <element signature="method#alphabeticalSort#0;class#CharSorter#0" expanded="false" />
                 <element signature="method#main#0;class#CharSorter#0" expanded="false" />
               </folding>
             </state>
@@ -268,6 +269,7 @@
           <folding>
             <element signature="method#getMainMenu#0;class#CharSorter#0" expanded="false" />
             <element signature="method#charTypes#0;class#CharSorter#0" expanded="false" />
+            <element signature="method#alphabeticalSort#0;class#CharSorter#0" expanded="false" />
             <element signature="method#main#0;class#CharSorter#0" expanded="false" />
           </folding>
         </state>
@@ -285,11 +287,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CharSorter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="73" column="8" lean-forward="false" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+        <state relative-caret-position="204">
+          <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
           <folding>
             <element signature="method#getMainMenu#0;class#CharSorter#0" expanded="false" />
             <element signature="method#charTypes#0;class#CharSorter#0" expanded="false" />
+            <element signature="method#alphabeticalSort#0;class#CharSorter#0" expanded="false" />
             <element signature="method#main#0;class#CharSorter#0" expanded="false" />
           </folding>
         </state>

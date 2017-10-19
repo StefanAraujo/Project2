@@ -66,10 +66,57 @@ public class CharSorter {
         return statement;
     }
     public static String alphabeticalSort(String comer){
+        String statement ="";
+        int ascii;
+        int first = 20;
+        int check;
 
+        char[] hex = comer.toCharArray();
 
+        for( int l = 0; l < hex.length; l++){
 
+            ascii = (int)  (hex[l]);
 
+            if ( ascii > first) {
+
+                first = ascii;
+
+            }
+        }
+
+        for ( int a = 20; a <= first ; a++){
+
+            for ( int b = 0; b < hex.length; b++){
+
+                boolean calc = true;
+                int cal = 0;
+                ascii = (int) hex[b];
+
+            for ( int z = b - 1; b >= 0; b--){
+                if (hex[z] == ascii)
+                    calc = false;
+
+            if (ascii == a && calc){
+
+                for (int n = b; n < hex.length; n++ ){
+                    check = (int) (hex[n]);
+
+                    if ( check ==  ascii) {
+                        cal =  cal + 1;
+                    }
+                }
+                statement = statement + hex[b] + " freq: " + cal + "\n";
+            }
+            }
+
+            }
+
+        }
+        return statement;
+    }
+    public static String frequencySort(String comer){
+
+        String statement = "";
 
         
     }

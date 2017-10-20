@@ -9,16 +9,34 @@ public class CharSorter {
         Scanner scnr = new Scanner(System.in);
 
 
+        System.out.println("\nPlease sleect the option you would like to see\n");
+
+
+        System.out.println("1. Display Character frequencies alphabetically");
+
+        System.out.println("2. Display sorted frequencies");
+
+        System.out.println("3. Show types of character frequencies");
+
+        System.out.println("4. Exit");
+
+
+
         try {
             userChoice = scnr.nextInt();
         } catch (InputMismatchException a) {
             System.out.println("Error, bad input, please enter a number 1-4");
+
             scnr.nextLine();
+
             userChoice = getMainMenu();
         }
         if (userChoice < 1 || userChoice > 4) {
+
             System.out.println("Error, bad input, please enter a number 1-4");
+
             scnr.nextLine();
+
             userChoice = getMainMenu();
 
         }
@@ -92,9 +110,12 @@ public class CharSorter {
                 int cal = 0;
                 ascii = (int) hex[b];
 
-            for ( int z = b - 1; b >= 0; b--){
-                if (hex[z] == ascii)
+            for ( int z = b - 1; z >= 0; z--) {
+                int repeat = (int) (hex[z]);
+
+                if (repeat == ascii)
                     calc = false;
+            }
 
             if (ascii == a && calc){
 
@@ -106,7 +127,7 @@ public class CharSorter {
                     }
                 }
                 statement = statement + hex[b] + " freq: " + cal + "\n";
-            }
+
             }
 
             }
@@ -114,6 +135,7 @@ public class CharSorter {
         }
         return statement;
     }
+
     public static String frequencySort(String comer){
 
         String statement = "";
@@ -167,14 +189,18 @@ public class CharSorter {
                     ascii  = (int) (hex[v]);
 
 
-                    for ( int j  = v - 1; j >= 0; j--)
+                    for ( int j  = v - 1; j >= 0; j--) {
 
-                        if ( hex[j]== ascii )
+                        if (hex[j] == ascii) {
 
                             calc = false;
 
+                        }
 
-                    for ( int t = v ; v < hex.length; v++) {
+                    }
+
+
+                    for ( int t = v ; t < hex.length; t++) {
 
                         check = (int) (hex[t]);
 
@@ -196,15 +222,51 @@ public class CharSorter {
     public static void main(String [] args ){
 
         String userInput;
+        String statement;
+
         Scanner scnr = new Scanner(System.in);
 
         boolean x = true;
 
         System.out.println("Welcome to Character Sorter Program\nPlease input a string to be sorted");
+
         userInput = scnr.nextLine();
 
         while(x){
-            switch 
+            switch (getMainMenu()){
+
+                case 1:
+
+                    statement = alphabeticalSort(userInput);
+
+                    System.out.println(statement);
+
+                    break;
+
+
+
+                case 2:
+                    System.out.println("The sorted by frequency characters are: \n");
+
+                    statement = frequencySort(userInput);
+
+                    System.out.println(statement);
+
+                    break;
+
+                case 3:
+
+                    statement = charTypes(userInput);
+
+                    System.out.println(statement);
+
+                    break;
+
+                case 4:
+                    System.out.println("\nCharacter Sorter Exited Successfully");
+
+                    return;
+            }
         }
 
 

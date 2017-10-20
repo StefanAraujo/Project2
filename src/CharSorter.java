@@ -118,13 +118,84 @@ public class CharSorter {
 
         String statement = "";
 
-        
+        int ascii;
+        int check;
+        int first = 20;
+        int largest = 0;
+
+        char[] hex = comer.toCharArray();
+
+        for (int n = 0; n < hex.length; n++){
+
+            ascii = (int) (hex[n]);
+
+            if ( ascii > first )
+                first = ascii;
+        }
+
+        for ( int q = 0 ; q < hex.length; q++) {
+
+            ascii = (int) (hex[q]);
+
+            int cal = 0;
+
+            for (int n = q ; n < hex.length; n++){
+
+
+                check = (int) (hex[n]);
+
+                if ( ascii == check)
+
+                    cal++;
+
+                if ( cal > largest )
+
+                    largest = cal ;
+            }
+        }
+
+        for ( int k = 1;  k <= largest; k++){
+
+            for ( int  h = first ; h >= 20; h--) {
+
+                for ( int v =0; v < hex.length; ++v){
+
+                    int cal  = 0;
+
+                    boolean calc = true;
+
+                    ascii  = (int) (hex[v]);
+
+
+                    for ( int j  = v - 1; j >= 0; j--)
+
+                        if ( hex[j]== ascii )
+
+                            calc = false;
+
+
+                    for ( int t = v ; v < hex.length; v++) {
+
+                        check = (int) (hex[t]);
+
+                        if ( check == ascii && calc) {
+                            cal = cal + 1;
+                        }
+                    }
+                    if ( cal == k &&  ascii == h ) {
+                        statement = hex[v] + " freq:  " + cal  + "\n" + statement;
+                    }
+                }
+            }
+        }
+
+        return statement;
     }
 
 
     public static void main(String [] args ){
 
-        String userInput:
+        String userInput;
         Scanner scnr = new Scanner(System.in);
 
         boolean x = true;
@@ -133,7 +204,7 @@ public class CharSorter {
         userInput = scnr.nextLine();
 
         while(x){
-            switch
+            switch 
         }
 
 

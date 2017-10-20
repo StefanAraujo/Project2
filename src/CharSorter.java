@@ -135,7 +135,6 @@ public class CharSorter {
         }
         return statement;
     }
-
     public static String frequencySort(String comer){
 
         String statement = "";
